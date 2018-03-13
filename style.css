@@ -1,0 +1,273 @@
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.ZA.Grid {
+  font-family: Roboto, sans-serif;
+  cursor: default;
+  user-select: none;
+  font-size: 14px;
+}
+
+.ZA.Grid * {
+  box-sizing: border-box;
+}
+
+.ZA.Grid .scroll:focus {
+  outline: none;
+}
+
+.ZA.Grid .row-marker.current ~ .cell {
+  background: #d9d9d9;
+}
+
+.ZA.Grid .scroll:focus .row-marker.current ~ .cell,
+.ZA.Grid .row:hover .row-marker.current ~ .cell {
+  background: #cfe8ff;
+  box-shadow: -1px -1px #a0d1ff inset, 0 -1px #a0d1ff;
+}
+
+.ZA.Grid .row:hover .cell {
+  x-background: #e7f3ff;
+}
+
+.ZA.Grid .row-marker.empty ~ .cell {
+  display: none;
+}
+
+.ZA.Grid .header {
+  box-shadow: 0 1px #d9d9d9 inset;
+}
+
+.ZA.Grid .header .cell {
+  white-space: nowrap;
+  padding: 0px 6px;
+  box-shadow: -1px -1px #d9d9d9 inset;
+  position: relative;
+}
+.ZA.Grid .row .cell {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0px 6px;
+  box-shadow: -1px -1px #d9d9d9 inset;
+  position: relative;
+}
+.ZA.Grid .cell:last-child {
+  padding-right: 16px;
+}
+
+.ZA.Grid .label.cell .toggle {
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  width: 1em;
+  margin-right: 4px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.ZA.Grid .label.cell .toggle.collapsed:before {
+  content: "\f0da";
+}
+
+.ZA.Grid .label.cell .toggle.expanded:before {
+  content: "\f0d7";
+}
+
+.ZA.Grid .label.cell .spacer {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: -6px;
+}
+
+.ZA.Grid .header {
+  background: #eee;
+}
+
+.ZA.Grid .header .titles {
+  font-weight: bold;
+}
+
+.ZA.Grid .header .cell[sort-order] .title:before {
+  font-family: "Font Awesome\ 5 Free";
+  margin: 0 4px;
+  float: right;
+  content: "";
+}
+
+.ZA.Grid .header .cell[sort-order="1"] .title:before {
+  content: "\f0d8";
+}
+
+.ZA.Grid .header .cell[sort-order="-1"] .title:before {
+  content: "\f0d7";
+}
+
+.ZA.Grid .cell[cell-align="right"] {
+  text-align: right;
+}
+
+.ZA.Grid .cell[cell-align="center"] {
+  text-align: center;
+}
+
+.ZA.Grid .header .cell[sort-order][cell-align="right"] .title:before {
+  float: left;
+}
+.ZA.Grid .header .cell .title {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+.ZA.Grid .header .cell[cell-align="right"] .title {
+  text-align: right;
+}
+
+.ZA.Grid .filters .cell {
+  display: flex;
+  padding: 4px;
+}
+.ZA.Grid .filters .cell {
+  display: flex;
+  padding: 4px;
+}
+
+.ZA.Grid .filters .cell input {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.ZA.Grid .filters .cell .clear {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+}
+
+.ZA.Grid .filters .cell .clear:before {
+  font-family: "Font Awesome\ 5 Free";
+  content: "\f00d";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: -50%;
+  padding: 0;
+  color: #ccc;
+  text-align: center;
+  line-height: 12px;
+  font-weight: bold;
+}
+.ZA.Grid .filters .cell .clear:hover:before {
+  color: #f00;
+}
+.ZA.Grid .filters .cell input[value=""] ~ .clear:before {
+  display: none;
+}
+
+.ZA.Grid .checkbox {
+  font-family: "Font Awesome 5 Free";
+  margin-right: 4px;
+  vertical-align: bottom;
+  font-weight: normal;
+}
+
+.ZA.Grid .checkbox:before {
+  content: "☐";
+  content: "\f0c8";
+}
+
+.ZA.Grid .checkbox.selected:before {
+  content: "☑";
+  content: "\f14a";
+}
+
+.ZA.Grid .checkbox.indeterminate:before {
+  content: "▣";
+  content: "\f146";
+}
+
+.ZA.Grid .statusbar {
+  background: #eee;
+  box-shadow: 0 1px #d9d9d9 inset;
+  font-size: 13px;
+  line-height: 26px;
+  display: flex;
+  white-space: nowrap;
+}
+.ZA.Grid .statusbar *:focus {
+  outline: none;
+}
+
+.ZA.Grid .statusbar .area {
+  box-shadow: -1px 0 #c9c9c9 inset;
+  flex: 0 1 auto;
+  padding: 0 6px;
+  overflow: hidden;
+}
+
+.ZA.Grid .statusbar .spacer {
+  flex: 1;
+}
+
+.ZA.Grid .statusbar .toolbar {
+  flex: 0;
+  display: flex;
+}
+
+.ZA.Grid .statusbar .toolbar .button {
+  color: #666;
+  padding: 0 6px;
+  cursor: pointer;
+  box-shadow: 1px 0 #d9d9d9 inset;
+}
+
+.ZA.Grid .statusbar .toolbar .button:hover {
+  background: #ddd;
+}
+
+.ZA.Grid .statusbar .toolbar .button.on {
+  background: #ddd;
+  color: #48d;
+}
+
+.ZA.Grid .statusbar .toolbar .button.off {
+  color: #999;
+}
+
+.ZA.Grid .statusbar .toolbar .button:before {
+  font-family: "Font Awesome 5 Free";
+}
+
+.ZA.Grid .statusbar .toolbar .button.filter:before {
+  content: "\f0b0";
+  font-weight: 900;
+}
+
+.ZA.Grid .statusbar .toolbar .button.columns:before {
+  content: "\f0db";
+  font-weight: 900;
+}
+
+.ZA.Grid .menu {
+  background: #eee;
+  color: black;
+  padding: 2px;
+  box-shadow: 0 0 0 1px #ddd inset;
+}
+
+.ZA.Grid .menu .item {
+  padding: 0 8px;
+}
+
+.ZA.Grid .menu .item .checkbox {
+  margin-right: 6px;
+}
+
+.ZA.Grid .header .sizer {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -3px;
+  z-index: 100;
+}

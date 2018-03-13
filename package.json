@@ -1,0 +1,15 @@
+{
+  "name": "ObservableGrids",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/l3n6l9lpnl",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "latest",
+    "mobx": "3.4.1",
+    "mobx-react": "4.4.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  }
+}
