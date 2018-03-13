@@ -5,7 +5,7 @@
   "keywords": [],
   "homepage": "https://codesandbox.io/s/l3n6l9lpnl",
   "main": "index.js",
-  "dependencies": {
+  "peerDependencies": {
     "lodash": "latest",
     "mobx": "3.4.1",
     "mobx-react": "4.4.0",
