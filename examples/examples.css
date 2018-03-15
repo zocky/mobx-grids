@@ -1,0 +1,13 @@
+.extend {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  outline: solid 3px red;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
